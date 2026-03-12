@@ -14,7 +14,7 @@ jobs:
 
     steps:
       - name: Checkout Source
-        user: actions/checkout@v4
+        uses: actions/checkout@v4
 
       # Github Actions 워크플로우에서 nginx 서버로
       # 복사하기 윈한 작업을 실행하는 과정
@@ -25,5 +25,5 @@ jobs:
           username: ${{ secrets. PUBLIC_USER }}
           key: ${{ secrets.PRIVATE_SSH_KEY }}
           source: "./*"
-          target: "/var/www/html"
+          target: "/var/www/html/front_end_0311"
 
